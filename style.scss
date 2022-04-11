@@ -5,6 +5,7 @@ html {
 body {
   font-size: 1.6rem;
   font-family: " Roboto", sans-serif;
+  background-color: pink;
 }
 @mixin size($width, $height: $width) {
   width: $width;
