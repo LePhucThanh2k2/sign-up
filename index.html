@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dropdown</title>
+    <title>Custom-Radio</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -22,32 +22,30 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="dropdown">
-      <div class="dropdown-select">
-        <i class="dropdown-icon fa fa-file"></i>
-        <span class="dropdown-text">File type</span>
-        <i class="fa-solid fa-angle-down dropdown-caret"></i>
-      </div>
-      <ul class="dropdown-list">
-        <li class="dropdown-item">
-          <i class="dropdown-icon fa fa-file"></i>
-          <span class="dropdown-text">Markup HTML</span>
-        </li>
-        <li class="dropdown-item">
-          <i class="dropdown-icon fa fa-file"></i>
-          <span class="dropdown-text">Markup HTML</span>
-        </li>
-        <li class="dropdown-item">
-          <i class="dropdown-icon fa fa-file"></i>
-          <span class="dropdown-text">Markup HTML</span>
-        </li>
-        <li class="dropdown-item">
-          <i class="dropdown-icon fa fa-file"></i>
-          <span class="dropdown-text">Markup HTML</span>
-        </li>
-      </ul>
-    </div>
-
+    <h1 class="input__heading">Em Có Yêu Tôi Không ?</h1>
+    <form action="" class="input">
+      <input
+        type="radio"
+        name="gender"
+        id="input__radio"
+        class="input__radio"
+      />
+      <label for="input__radio" class="radio__label">A.Có</label>
+      <input
+        type="radio"
+        name="gender"
+        id="input__radio1"
+        class="input__radio1"
+      />
+      <label for="input__radio1" class="radio__label1">B.Không</label>
+      <input
+        type="radio"
+        name="gender"
+        id="input__radio2"
+        class="input__radio2"
+      />
+      <label for="input__radio2" class="radio__label2">C.Chưa Biết</label>
+    </form>
     <script src="javascript.js"></script>
   </body>
 </html>
