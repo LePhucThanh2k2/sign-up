@@ -21,60 +21,44 @@ a {
   text-decoration: none;
 }
 
-.input {
-  margin: 2rem auto;
-  width: 400rem;
-  display: inline-block;
-  margin: 5rem auto;
-}
-.input__heading {
-  margin: 2rem 5rem;
-}
-.input__radio {
-  display: none;
-}
-.input__radio:checked + .radio__label::before {
-  background-color: #fd5672;
-  box-shadow: 0 0 0 4px white, 0 0 0 7px #fd5672;
-}
-.input__radio1 {
-  display: none;
-}
-.input__radio1:checked + .radio__label1::before {
-  background-color: #fd5672;
-  box-shadow: 0 0 0 4px white, 0 0 0 7px #fd5672;
-}
-.input__radio2 {
-  display: none;
-}
-.input__radio2:checked + .radio__label2::before {
-  background-color: #fd5672;
-  box-shadow: 0 0 0 4px white, 0 0 0 7px #fd5672;
+.file {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
 }
 
-.radio__label,
-.radio__label1,
-.radio__label2 {
-  position: relative;
-  padding-left: 3rem;
-  margin-right: 5rem;
-  margin-left: 5rem;
+.input-file {
+  display: none;
 }
-.radio__label::before,
-.radio__label1::before,
-.radio__label2::before {
-  content: "";
-  width: 2rem;
-  height: 2rem;
-  background-color: white;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  box-shadow: 0 0 0 4px white, 0 0 0 7px #ccc;
-  transition: all 0.1s linear;
+.input-file--label {
   cursor: pointer;
+  width: 8rem;
+  height: 8rem;
+  background-color: aqua;
+  position: relative;
+  border-radius: 1rem;
+  border: 2px solid #333;
+}
+.input-file--label__icon {
+  position: absolute;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+}
+
+#display {
+  margin-top: 2rem;
+  width: 60rem;
+  height: 50rem;
+  border: #333 dashed 2px;
+  border-radius: 6px;
+  background-position: center;
+  background-size: cover;
 }
 
 /*# sourceMappingURL=style.css.map */

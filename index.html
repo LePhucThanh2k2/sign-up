@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Custom-Radio</title>
+    <title>Upload and Display Images</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -22,30 +22,18 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <h1 class="input__heading">Em Có Yêu Tôi Không ?</h1>
-    <form action="" class="input">
+    <div class="file">
       <input
-        type="radio"
-        name="gender"
-        id="input__radio"
-        class="input__radio"
+        type="file"
+        id="input-file"
+        class="input-file"
+        accept="image/png,image/jpg"
       />
-      <label for="input__radio" class="radio__label">A.Có</label>
-      <input
-        type="radio"
-        name="gender"
-        id="input__radio1"
-        class="input__radio1"
-      />
-      <label for="input__radio1" class="radio__label1">B.Không</label>
-      <input
-        type="radio"
-        name="gender"
-        id="input__radio2"
-        class="input__radio2"
-      />
-      <label for="input__radio2" class="radio__label2">C.Chưa Biết</label>
-    </form>
+      <label for="input-file" class="input-file--label">
+        <i class="fa-solid fa-upload input-file--label__icon"></i>
+      </label>
+      <div id="display"></div>
+    </div>
     <script src="javascript.js"></script>
   </body>
 </html>

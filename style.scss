@@ -39,54 +39,37 @@ a {
     transform: translate(-50%, -50%);
   }
 }
+.file {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
 .input {
-  margin: 2rem auto;
-  width: 400rem;
-  display: inline-block;
-  &__heading {
-    margin: 2rem 5rem;
-  }
-  margin: 5rem auto;
-  &__radio {
+  &-file {
     display: none;
-    &:checked + .radio__label::before {
-      background-color: #fd5672;
-      box-shadow: 0 0 0 4px white, 0 0 0 7px #fd5672;
-    }
-  }
-  &__radio1 {
-    display: none;
-    &:checked + .radio__label1::before {
-      background-color: #fd5672;
-      box-shadow: 0 0 0 4px white, 0 0 0 7px #fd5672;
-    }
-  }
-  &__radio2 {
-    display: none;
-    &:checked + .radio__label2::before {
-      background-color: #fd5672;
-      box-shadow: 0 0 0 4px white, 0 0 0 7px #fd5672;
+    &--label {
+      cursor: pointer;
+      @include size(8rem);
+      background-color: aqua;
+      position: relative;
+      border-radius: 1rem;
+      border: 2px solid #333;
+      &__icon {
+        position: absolute;
+        @include positionCenter("both");
+        font-size: 3rem;
+      }
     }
   }
 }
-.radio__label,
-.radio__label1,
-.radio__label2 {
-  position: relative;
-  padding-left: 3rem;
-  margin-right: 5rem;
-  margin-left: 5rem;
-  &::before {
-    content: "";
-    @include size(2rem);
-    background-color: white;
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    box-shadow: 0 0 0 4px white, 0 0 0 7px #ccc;
-    transition: all 0.1s linear;
-    cursor: pointer;
-  }
+#display {
+  margin-top: 2rem;
+  @include size(60rem, 50rem);
+  border: #333 dashed 2px;
+  border-radius: 6px;
+  background-position: center;
+  background-size: cover;
 }
