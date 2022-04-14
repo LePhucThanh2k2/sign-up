@@ -1,12 +1,9 @@
-const image_input = document.querySelector("#input-file");
-let upload_image = "";
-image_input.addEventListener("change", function () {
-  const render = new FileReader();
-  render.addEventListener("load", () => {
-    upload_image = render.result;
-    document.getElementById(
-      "display"
-    ).style.backgroundImage = `url(${upload_image})`;
-  });
-  render.readAsDataURL(this.files[0]);
+const input_checked = document.querySelector(".input__checkbox");
+
+input_checked.addEventListener("change", function () {
+  if (this.checked) {
+    document.querySelector(".toggle").style.backgroundColor = "black";
+  } else {
+    document.querySelector(".toggle").style.backgroundColor = "transparent";
+  }
 });

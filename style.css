@@ -21,44 +21,40 @@ a {
   text-decoration: none;
 }
 
-.file {
+.toggle {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  position: relative;
+  transition: all 0.25s linear;
 }
 
-.input-file {
+.input__checkbox {
   display: none;
 }
-.input-file--label {
-  cursor: pointer;
-  width: 8rem;
-  height: 8rem;
-  background-color: aqua;
-  position: relative;
-  border-radius: 1rem;
-  border: 2px solid #333;
+.input__checkbox:checked + .checkbox-label {
+  background-color: rgb(8, 93, 250);
 }
-.input-file--label__icon {
-  position: absolute;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 3rem;
+.input__checkbox:checked + .checkbox-label .checkbox-label__spin {
+  transform: translateX(5rem);
 }
 
-#display {
-  margin-top: 2rem;
-  width: 60rem;
-  height: 50rem;
-  border: #333 dashed 2px;
-  border-radius: 6px;
-  background-position: center;
-  background-size: cover;
+.checkbox-label {
+  cursor: pointer;
+  width: 10rem;
+  height: 5rem;
+  background-color: #ccc;
+  transition: all 0.125s linear;
+  border-radius: 3rem;
+  padding: 5px;
+}
+.checkbox-label__spin {
+  width: 4rem;
+  height: 4rem;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: all 0.125s linear;
 }
 
 /*# sourceMappingURL=style.css.map */

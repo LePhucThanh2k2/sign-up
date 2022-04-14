@@ -39,37 +39,40 @@ a {
     transform: translate(-50%, -50%);
   }
 }
-.file {
+
+.toggle {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  position: relative;
+  transition: all 0s linear;
 }
 .input {
-  &-file {
+  &__checkbox {
     display: none;
-    &--label {
-      cursor: pointer;
-      @include size(8rem);
-      background-color: aqua;
-      position: relative;
-      border-radius: 1rem;
-      border: 2px solid #333;
-      &__icon {
-        position: absolute;
-        @include positionCenter("both");
-        font-size: 3rem;
+    &:checked + .checkbox-label {
+      background-color: rgb(8, 93, 250);
+      .checkbox-label__spin {
+        transform: translateX(5rem);
       }
     }
   }
 }
-#display {
-  margin-top: 2rem;
-  @include size(60rem, 50rem);
-  border: #333 dashed 2px;
-  border-radius: 6px;
-  background-position: center;
-  background-size: cover;
+.checkbox {
+  &-label {
+    cursor: pointer;
+    @include size(10rem, 5rem);
+    background-color: #ccc;
+    transition: all 0.125s linear;
+
+    border-radius: 3rem;
+    padding: 5px;
+    &__spin {
+      @include size(4rem);
+      background-color: #fff;
+      border-radius: 50%;
+      transition: all 0.125s linear;
+    }
+  }
 }
