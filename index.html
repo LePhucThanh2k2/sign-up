@@ -22,11 +22,84 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="toggle">
-      <input type="checkbox" class="input__checkbox" id="input__checkbox" />
-      <label for="input__checkbox" class="checkbox-label">
-        <div class="checkbox-label__spin"></div>
-      </label>
+    <div class="contain">
+      <div class="signup">
+        <div class="signup-content">
+          <form action="#">
+            <h1 class="signup__heading">Sign Up</h1>
+            <h2 class="signup__caption">Sign up width</h2>
+            <div class="signup-social">
+              <a href="#" class="signup-socia--google">
+                <i class="fa-brands fa-google signup-social--google__icon"></i>
+                <p class="signup-social--google__text">Sign up with Google</p>
+              </a>
+              <a href="#" class="signup-socia--facebook">
+                <i
+                  class="fa-brands fa-facebook signup-social--facebook__icon"
+                ></i>
+                <p class="signup-social--facebook__text">
+                  Sign up with facebook
+                </p>
+              </a>
+            </div>
+            <div class="signup-form">
+              <div class="signup-form__group">
+                <label for="input-name" class="input-name__label">Name</label>
+                <input type="text" class="input-name" id="input-name" />
+              </div>
+              <div class="signup-form__group">
+                <label for="input-email" class="input-email__label"
+                  >Email</label
+                >
+                <input type="text" class="input-email" id="input-email" />
+              </div>
+              <div class="signup-form__group">
+                <label for="input-password" class="input-password__label"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  class="input-password"
+                  id="input-password"
+                />
+              </div>
+            </div>
+            <div class="signup-showpass">
+              <input
+                type="checkbox"
+                onclick="showPass()"
+                class="input-checkbox"
+                id="input-checkbox"
+              />
+              <label for="input-checkbox" class="input-checkbox__label"
+                >Show Password</label
+              >
+            </div>
+            <div class="signup-term">
+              <input
+                type="checkbox"
+                name="input-term"
+                id="input-term"
+                class="input-term"
+              />
+              <label for="input-term" class="input-term__label"
+                >I've read and agree with Term of Service and our Privacy
+                Policy</label
+              >
+            </div>
+            <button type="submit" class="signup-button">
+              <i class="fa-solid fa-arrow-right signup-button__icon"></i>
+            </button>
+          </form>
+          <p class="signin-text">
+            Already have an account ?
+            <a href="#" class="signin-link">Sign In</a>
+          </p>
+        </div>
+        <div class="signup-image">
+          <img src="./rocket.jpg" alt="" class="signup-image__rocket" />
+        </div>
+      </div>
     </div>
     <script src="javascript.js"></script>
   </body>

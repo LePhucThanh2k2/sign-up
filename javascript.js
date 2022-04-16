@@ -1,9 +1,8 @@
-const input_checked = document.querySelector(".input__checkbox");
-
-input_checked.addEventListener("change", function () {
-  if (this.checked) {
-    document.querySelector(".toggle").style.backgroundColor = "black";
+function showPass() {
+  var x = document.getElementById("input-password");
+  if (x.type === "password") {
+    x.type = "text";
   } else {
-    document.querySelector(".toggle").style.backgroundColor = "transparent";
+    x.type = "password";
   }
-});
+}
