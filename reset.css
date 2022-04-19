@@ -125,6 +125,12 @@ table {
 html {
   font-size: 62.5%;
 }
-* {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
+}
+*::selection {
+  background-color: rgb(110, 143, 216);
+  color: rgb(36, 27, 27);
 }
