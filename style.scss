@@ -41,82 +41,37 @@ a {
     transform: translate(-50%, -50%);
   }
 }
-.box {
-  background-color: #151320;
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
+body {
+  background-color: #151515;
 }
-.skill {
-  border-radius: 5px;
-
-  @include size(25rem);
-  @include positionCenter("both");
-  animation: bin 2s alternate infinite;
-  overflow: hidden;
+.circle {
+  @include size(7rem);
+  margin: 10rem auto;
+  position: relative;
+}
+.box {
+  top: 0;
+  left: 0;
+  @include size(100%);
+  transform: rotate(calc(var(--value) * 45deg));
+  position: absolute;
   &::before {
-    border-radius: 5px;
     content: "";
     position: absolute;
-    top: -25%;
-    left: -25%;
-    @include size(150%);
-    background: conic-gradient(
-      #fd004c,
-      #fe9000,
-      #fff020,
-      #3edf4b,
-      #3363ff,
-      #b102b7,
-      #fd004c
-    );
+    top: 0;
+    left: 0;
+    @include size(1rem);
+    border-radius: 50%;
+    border: 4px #fff solid;
     animation: spin 2s linear infinite;
-  }
-  &::after {
-    content: "Binniac";
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    text-transform: uppercase;
-    position: absolute;
-    @include size(90%);
-    font-size: 3rem;
-    background-color: #151320;
-    border-radius: 5px;
-    top: 5%;
-    left: 5%;
+    animation-delay: calc(var(--value) * 0.25s);
   }
 }
 @keyframes spin {
-  100% {
-    transform: rotate(360deg);
+  to {
+    transform: scale(0);
   }
-}
-@keyframes bin {
-  0% {
-    box-shadow: 1px 1px 35px rgba($color: #fd004c, $alpha: 1);
-  }
-  20% {
-    box-shadow: 1px 1px 35px rgba($color: #fe9000, $alpha: 1);
-  }
-  40% {
-    box-shadow: 1px 1px 35px rgba($color: #fff020, $alpha: 1);
-  }
-  60% {
-    box-shadow: 1px 1px 35px rgba($color: #3edf4b, $alpha: 1);
-  }
-  80% {
-    box-shadow: 1px 1px 35px rgba($color: #3363ff, $alpha: 1);
-  }
-  90% {
-    box-shadow: 1px 1px 35px rgba($color: #b102b7, $alpha: 1);
-  }
-  100% {
-    box-shadow: 2px 2px 35px rgba($color: #fd004c, $alpha: 1);
+  from {
+    transform: scale(2);
   }
 }
