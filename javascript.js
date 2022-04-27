@@ -1,22 +1,12 @@
-const wrapper = document.querySelector(".wrapper");
-let pressed = false;
-let startX = 0;
-
-wrapper.addEventListener("mousedown", function (e) {
-  pressed = true;
-  startX = e.clientX;
-  this.style.cursor = "grabbing";
+const manualBtn = document.querySelectorAll(".manual-btn");
+let count = 1;
+manualBtn.forEach((element, idx) => {
+  element.addEventListener("click", (e) => {
+    count = idx + 1;
+  });
 });
-wrapper.addEventListener("mouseleave", function (e) {
-  pressed = false;
-});
-
-window.addEventListener("mouseup", function (e) {
-  pressed = false;
-  wrapper.style.cursor = "grab";
-});
-
-wrapper.addEventListener("mousemove", function (e) {
-  if (!pressed) return;
-  this.scrollLeft += startX - e.clientX;
-});
+setInterval(function () {
+  document.getElementById("radio" + count).checked = true;
+  count++;
+  if (count > 4) count = 1;
+}, 5000);
