@@ -19,102 +19,218 @@ textarea {
 
 a {
   text-decoration: none;
-  color: #fff;
-}
-body {
-  margin: 0;
-  padding: 0;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #09062f;
 }
 
-.slider {
-  border: 3px solid rgb(250, 250, 250);
-  box-shadow: 0 0 20px 6px rgb(6, 254, 250);
-  width: 800px;
-  height: 500px;
-  border-radius: 10px;
-  overflow: hidden;
+body {
+  font-family: "Oswald", sans-serif;
+}
+
+.back {
+  color: #d19523;
+}
+
+.register {
+  background-color: #343a4a;
+  width: 100vw;
+  height: 100vh;
   position: relative;
 }
-.slide-image {
+.register-container {
+  border-radius: 1rem;
+  box-shadow: 0px 10px 20px 10px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 80%;
+}
+.register-container::before {
+  border-radius: 1rem;
+  content: "";
+  position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  top: 0;
+  left: 0;
+  background-color: #fdb832;
+  z-index: -1;
 }
-.slide-list {
-  width: 400%;
+.register-container::after {
+  border-radius: 1rem 0 0 1rem;
+  content: "";
+  position: absolute;
+  width: 40%;
   height: 100%;
-  display: flex;
+  top: 0;
+  left: 0;
+  background-color: rgb(71, 138, 138);
+  z-index: -1;
+  clip-path: polygon(0 0, 100% 0, 84% 100%, 0% 100%);
 }
-.input-radio {
+.register--image {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) translateX(-7%);
+  display: inline-block;
+  object-fit: cover;
+  width: 50rem;
+}
+.register--content {
+  border-radius: 1rem;
+  position: absolute;
+  top: 3rem;
+  right: 0;
+  transform: translateX(-10%);
+  width: 50rem;
+  height: 80%;
+  padding: 2rem;
+}
+.register-wrap {
+  background-color: #fff;
+  border-radius: 1rem;
+  margin: 3rem 0;
+  box-shadow: 0px 15px 20px 7px rgba(0, 0, 0, 0.216);
+}
+.register-wrap--primary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem;
+  box-shadow: 0 0 9px 0 #ccc;
+}
+.register--title {
+  color: #fdb832;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 400;
+}
+.register-wrap--secondary {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem 0;
+  margin-top: 1rem;
+}
+.register--fistName {
+  text-transform: uppercase;
+  color: #ccc;
+  letter-spacing: 3px;
+  font-size: 1.5rem;
+}
+.register--lastName {
+  text-transform: uppercase;
+  color: #ccc;
+  letter-spacing: 3px;
+  font-size: 1.5rem;
+}
+.register--email {
+  text-transform: uppercase;
+  color: #ccc;
+  letter-spacing: 3px;
+  font-size: 1.5rem;
+}
+.register--pass {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.register--pass__show {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+  color: #ccc;
+}
+.register--password {
+  text-transform: uppercase;
+  color: #ccc;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+}
+.register--button {
+  cursor: pointer;
+  background-color: rgb(71, 138, 138);
+  border: 0;
+  color: #fff;
+  padding: 2rem;
+  text-transform: uppercase;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.register-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.register-facebook {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 20px;
+  color: #000;
+  padding: 2rem 3rem;
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.213);
+  border-radius: 6px;
+}
+.register-facebook--text {
+  text-transform: uppercase;
+}
+.register-wrap--author {
+  margin-top: 2rem;
+  color: #d19523;
+}
+.register-wrap--term {
+  margin-top: 1rem;
+  color: #d19523;
+}
+
+.sign-in {
+  color: #000;
+}
+.sign-in--icon {
+  color: #ccc;
+  margin-right: 1rem;
+}
+
+#firstName,
+#lastName,
+#email,
+#password {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  outline: none;
+  margin-bottom: 1rem;
+}
+#firstName::placeholder,
+#lastName::placeholder,
+#email::placeholder,
+#password::placeholder {
+  color: rgb(215, 215, 215);
+}
+#firstName::-webkit-input-placeholder,
+#lastName::-webkit-input-placeholder,
+#email::-webkit-input-placeholder,
+#password::-webkit-input-placeholder {
+  /* Edge */
+  color: rgb(215, 215, 215);
+}
+#firstName:-ms-input-placeholder,
+#lastName:-ms-input-placeholder,
+#email:-ms-input-placeholder,
+#password:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: rgb(215, 215, 215);
+}
+
+.show {
   display: none;
 }
-.slide {
-  width: 800px;
-  transition: all 1.25s linear;
-}
-.navigation-manual {
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0 2rem;
-}
-.manual-btn {
-  border: 3px #fff solid;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-}
-.manual-btn:hover {
-  background-color: #40d3dc;
-}
-#radio1:checked ~ .first {
-  margin-left: 0;
-}
-#radio2:checked ~ .first {
-  margin-left: -25%;
-}
-#radio3:checked ~ .first {
-  margin-left: -50%;
-}
-#radio4:checked ~ .first {
-  margin-left: -75%;
-}
-.navigation-auto {
-  position: absolute;
-  bottom: 5%;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0 2rem;
-}
-.auto-btn1,
-.auto-btn2,
-.auto-btn3,
-.auto-btn4 {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-}
-#radio1:checked ~ .navigation-auto .auto-btn1 {
-  background-color: #40d3dc;
-}
-#radio2:checked ~ .navigation-auto .auto-btn2 {
-  background-color: #40d3dc;
-}
-#radio3:checked ~ .navigation-auto .auto-btn3 {
-  background-color: #40d3dc;
-}
-#radio4:checked ~ .navigation-auto .auto-btn4 {
-  background-color: #40d3dc;
-}
+
+/*# sourceMappingURL=style.css.map */

@@ -7,51 +7,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./reset.css">
   <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-  <title>Image Slider</title>
+  <title>Sign Up</title>
 </head>
 
 <body>
-  <div class="slider">
-    <div class="slide-list">
-      <!-- radio buttons start -->
-      <input type="radio" name="radio-btn" id="radio1" class="input-radio">
-      <input type="radio" name="radio-btn" id="radio2" class="input-radio">
-      <input type="radio" name="radio-btn" id="radio3" class="input-radio">
-      <input type="radio" name="radio-btn" id="radio4" class="input-radio">
-      <!-- radio buttons end -->
+  <section>
+    <div class="register">
+      <div class="register-container">
+        <!-- content-left - start-->
+        <img src="./images/bgr.jpg" alt="" class="register--image">
+        <!-- content-left - end-->
 
-      <!-- slide images start -->
-      <div class="slide first"><img src="./images/1.jpg" alt="" class="slide-image"></div>
-      <div class="slide"><img src="./images/2.jpg" alt="" class="slide-image"></div>
-      <div class="slide"><img src="./images/3.jpg" alt="" class="slide-image"></div>
-      <div class="slide"><img src="./images/4.jpg" alt="" class="slide-image"></div>
-      <!-- slide images end -->
+        <!-- content-right - start-->
+        <div class="register--content">
+          <a href="#" class="back">
+            <i class="fa-solid fa-angle-left back--icon"></i>
+            Back</a>
+          <div class="register-wrap">
+            <div class="register-wrap--primary">
+              <p class="register--title">create an account</p>
+              <a href="#" class="sign-in">
+                <i class="fa-solid fa-caret-up sign-in--icon"></i>
+                Sign In
+              </a>
+            </div>
+            <div class="register-wrap--secondary">
+              <label for="firstName" class="register--fistName">firstname</label>
+              <input type="text" name="first-name" id="firstName" placeholder="Fero">
 
-      <!-- automatic navigation start -->
-      <div class="navigation-auto">
-        <div class="auto-btn1"></div>
-        <div class="auto-btn2"></div>
-        <div class="auto-btn3"></div>
-        <div class="auto-btn4"></div>
+              <label for="lastName" class="register--lastName">lastname</label>
+              <input type="text" name="last-name" id="lastName" placeholder="M azanec">
+
+              <label for="email" class="register--email">e-mail</label>
+              <input type="email" name="email" id="email" placeholder="mazanec@gmail.com">
+
+              <div class="register--pass">
+                <label for="password" class="register--password">password</label>
+                <input type="password" name="password" id="password">
+                <input type="checkbox" name="show" id="show" class="show">
+                <label for="show" id="passShow" class="register--pass__show">
+                  Show
+                </label>
+              </div>
+              <button type="submit" class="register--button">sign up</button>
+            </div>
+          </div>
+          <div class="register-bottom">
+            <a href="#" class="register-facebook">
+              <i class="fa-brands fa-facebook-f register-facebook--icon"></i>
+              <p class="register-facebook--text">sign up with facebook</p>
+            </a>
+            <p class="register-wrap--author">
+              By: Binniac
+            </p>
+            <a href="#" class="register-wrap--term">
+              Term & Lorem ipsum dolor sit amet consectetur
+            </a>
+          </div>
+        </div>
       </div>
-      <!-- automatic navigation end -->
-
-      <!-- manual navigation start -->
-      <div class="navigation-manual">
-        <label for="radio1" class="manual-btn "></label>
-        <label for="radio2" class="manual-btn "></label>
-        <label for="radio3" class="manual-btn"></label>
-        <label for="radio4" class="manual-btn"></label>
-      </div>
-      <!-- manual navigation end -->
-
     </div>
-  </div>
-  <script src="./javascript.js"></script>
+  </section>
 </body>
+<script src="./showpass.js"></script>
 
 </html>

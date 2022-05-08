@@ -1,0 +1,91 @@
+html {
+  font-size: 62.5%;
+}
+
+body,
+input,
+select,
+button,
+textarea {
+  font-size: 1.6rem;
+  font-family: " Roboto", sans-serif;
+  box-sizing: border-box;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+}
+
+.register {
+  background-color: #6a779c;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.register-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 80%;
+}
+.register-container::before {
+  border-radius: 1rem;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fdb832;
+  z-index: -1;
+}
+.register-container::after {
+  border-radius: 1rem 0 0 1rem;
+  content: "";
+  position: absolute;
+  width: 35%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #464471;
+  z-index: -1;
+  clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0 50%, 0% 0%);
+}
+.register--image {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) translateX(-20%);
+  display: inline-block;
+  object-fit: cover;
+  width: 40rem;
+  display: none;
+}
+.register--content {
+  border-radius: 1rem;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) translateX(-10%);
+  background-color: #fff;
+  width: 50rem;
+  height: 80%;
+  padding: 2rem;
+}
+.register-wrap--secondary {
+  display: flex;
+  flex-direction: column;
+}
+
+/*# sourceMappingURL=styles.css.map */
